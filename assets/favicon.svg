@@ -1,1 +1,32 @@
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="32" cy="32" r="29"/>
+    </clipPath>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="#050b08"/>
+
+  <image
+    href="profile.png"
+    x="3"
+    y="3"
+    width="58"
+    height="58"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#circle)"/>
+
+  <circle cx="32" cy="32" r="29"
+    fill="none"
+    stroke="#00ff88"
+    stroke-width="2"
+    filter="url(#glow)"/>
+</svg>
